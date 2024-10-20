@@ -1,3 +1,4 @@
+# HTTPS
 server {
 	listen 443 ssl default_server;
 	listen [::]:443 ssl default_server;
@@ -16,10 +17,33 @@ server {
 	}
 }
 
+# HTTP redirect
 server {
     listen 80 default_server;
     server_name whitegoat.co.uk www.whitegoat.co.uk;
     return 301 https://whitegoat.co.uk/;
+}
+
+# Default MC
+server {
+    listen 25565;
+
+    server_name whitegoat.co.uk www.whitegoat.co.uk;
+
+    location / {
+        proxy_pass http://localhost:25565/;
+    }
+}
+
+# Default Bedrock
+server {
+    listen 19132;
+
+    server_name whitegoat.co.uk www.whitegoat.co.uk;
+
+    location / {
+        proxy_pass http://localhost:19132/;
+    }
 }
 
 # Map

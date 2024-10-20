@@ -35,5 +35,6 @@ COPY ./site /www-root
 #------Start The Server------
 
 COPY docker-start.sh /docker-start.sh
+RUN dos2unix /docker-start.sh
 
 CMD ["/bin/bash", "/docker-start.sh"]
