@@ -1,2 +1,4 @@
 server/*
 nginx/ssl/*
+fabric-server/*
+paper-server/*
