@@ -2,3 +2,4 @@ server/*
 nginx/ssl/*
 fabric/*
 paper/*
+*.mrpack
