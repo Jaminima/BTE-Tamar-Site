@@ -34,7 +34,7 @@ server {
     server_name map.whitegoat.co.uk map.localhost;
 
     location / {
-        proxy_pass http://127.0.0.1:8100/;
+        proxy_pass http://paper:8100/;
     }
 }
 
@@ -48,6 +48,6 @@ server {
     server_name stats.whitegoat.co.uk stats.localhost;
 
     location / {
-        proxy_pass http://127.0.0.1:8804/;
+        proxy_pass http://paper:8804/;
     }
 }
