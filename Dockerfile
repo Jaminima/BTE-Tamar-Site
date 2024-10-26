@@ -25,12 +25,14 @@ COPY ./nginx/ssl/pub.cer /etc/nginx/keys/pub.cer
 COPY ./nginx/ssl/inter.cer /etc/nginx/keys/inter.cer
 COPY ./nginx/ssl/pri.key /etc/nginx/keys/pri.key
 
+RUN nginx -t
+
 #------Configure Website------
     
 RUN mkdir /www-root
 RUN chmod 777 /www-root
 
-COPY ./site /www-root
+#COPY ./site /www-root
 
 #------Start The Server------
 

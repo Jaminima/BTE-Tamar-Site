@@ -1,63 +1,105 @@
 <html>
-    <head>
-        <title>WhiteGoat</title>
-        <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.css">
-        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-        <style>
-            .btn-primary, .btn-secondary {
-                transition: transform 0.2s;
-            }
-            .btn-primary:hover, .btn-secondary:hover {
-                transform: scale(1.1);
-            }
-            .card-row{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                gap: 1rem;
-                flex-wrap: wrap;
-            }
-            .card {
-                background-color: rgba(0, 0, 0, 0.7);
-                border: none;
-                border-radius: 10px;
-                padding: 1rem;
-                margin: 1rem 0;
-                flex: 1;
-            }
-            .card h3, .card p {
-                margin: 0.5rem 0;
-            }
-        </style>
-    </head>
-    <body class="container">
-        <div class="text-center my-5">
-            <img src="assets/logo.png" alt="Image" class="img-fluid mb-4" style="height: 20rem; image-rendering: pixelated;"/>
-            <h1 class="display-4">WhiteGoat</h1>
-            <h2 class="lead">Minecraft Servers</h2>
+  <head>
+    <title>WhiteGoat</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/vapor/bootstrap.css"
+    />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <style>
+      .btn-primary,
+      .btn-secondary {
+        transition: transform 0.2s;
+        min-width: 10rem;
+        min-height: 2rem;
+      }
+      .btn-primary:hover,
+      .btn-secondary:hover {
+        transform: scale(1.1);
+      }
+      .card-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .card {
+        background-color: rgba(0, 0, 0, 0.7);
+        border: none;
+        border-radius: 10px;
+        padding: 1rem;
+        margin: 1rem 0;
+        flex: 1;
+      }
+      .card h3 {
+        margin: 0;
+      }
+      .card p {
+        margin: 1rem 0;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app/mc-status.js"></script>
+  </head>
+  <body class="container">
+    <div class="text-center my-t">
+      <img
+        src="assets/logo.png"
+        alt="Image"
+        class="img-fluid mb-4"
+        style="height: 20rem; image-rendering: pixelated"
+      />
+      <h1 class="display-4">WhiteGoat</h1>
+      <h2 class="lead">Whitelisted Minecraft Servers</h2>
+    </div>
+    <div class="card-row text-center">
+      <div class="card">
+        <h3>Vanilla</h3>
+        <span id="vanilla-status"></span>
+        <p>
+          <b>Java</b>
+          <br />
+          whitegoat.co.uk:25565
+        </p>
+        <p>
+          <b>Bedrock</b> <br />
+          whitegoat.co.uk:19132
+        </p>
+        <div class="my-2">
+          <a href="https://map.whitegoat.co.uk/" class="btn btn-primary mx-2"
+            >Map</a
+          >
+          <a
+            href="https://stats.whitegoat.co.uk/"
+            class="btn btn-secondary mx-2"
+            >Stats</a
+          >
         </div>
-        <h2 class="lead text-center mt-5">Vanilla</h2>
-        <div class="card-row text-center">
-            <div class="card">
-                <h3>Vanilla Server</h3>
-                <p><b>Java -</b> whitegoat.co.uk:25565</p>
-                <p><b>Bedrock -</b> whitegoat.co.uk:19132</p>
-                <div class="my-2">
-                    <a href="https://map.whitegoat.co.uk/" class="btn btn-primary mx-2">Map</a>
-                    <a href="https://stats.whitegoat.co.uk/" class="btn btn-secondary mx-2">Stats</a>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="card-row text-center">
+      <div class="card">
+        <h3>Orange Juice</h3>
+        <span id="orange-status"></span>
+        <p>
+            <b>Java</b>
+            <br />
+            whitegoat.co.uk:24565</p>
+        <div class="my-2">
+          <a
+            href="https://modrinth.com/app"
+            target="_blank"
+            class="btn btn-primary mx-2"
+            >Install Modrinth App</a
+          >
+          <a
+            href="assets/modpacks/Orange Juice 1.0.0.mrpack"
+            class="btn btn-secondary mx-2"
+            >Download Mod Pack</a
+          >
         </div>
-        <h2 class="lead text-center mt-5">Orange Juice</h2>
-        <div class="card-row text-center">
-            <div class="card">
-                <h3>Better MC + Cobblemon Server</h3>
-                <p>whitegoat.co.uk:24565</p>
-                <div class="my-2">
-                    <a href="https://modrinth.com/app" target="_blank" class="btn btn-primary mx-2">Modrinth App</a>
-                    <a href="assets/modpacks/Orange Juice 1.0.0.mrpack" class="btn btn-secondary mx-2">Orange Juice Pack</a>
-                </div>  
-            </div>
-        </div>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
