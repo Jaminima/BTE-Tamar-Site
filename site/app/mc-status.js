@@ -1,6 +1,10 @@
 function setServerStatus(ip, elementId) {
+    const statusElement = $("#"+elementId);
+
+    statusElement.html("Loading...");
+    statusElement.css("color", "gray");
+
     $.getJSON("https://api.mcsrvstat.us/3/"+ip, function(data) {
-        const statusElement = $("#"+elementId);
 
         if (data.online) {
             statusElement.html("Online "+data.players.online+"/"+data.players.max);
@@ -14,8 +18,6 @@ function setServerStatus(ip, elementId) {
 
 //when the document loads
 $(document).ready(function() {
-    //https://api.mcsrvstat.us/3/whitegoat.co.uk
-    //get the status of the server
     setServerStatus("whitegoat.co.uk", "vanilla-status");
     setServerStatus("whitegoat.co.uk:24565", "orange-status");
 });
