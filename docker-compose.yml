@@ -1,26 +1,4 @@
 services:
-    paper:
-      image: jaminima/paper
-      stdin_open: true
-      tty: true
-      ports:
-        - "25565:25565"
-        - "19132:19132/udp"
-        - "8804:8804"
-        - "8100:8100"
-      volumes:
-        - ./paper/server:/minecraft
-
-    fabric:
-      image: jaminima/fabric
-      stdin_open: true
-      tty: true
-      ports:
-        - "24565:25565"
-      volumes:
-        - ./fabric/server:/minecraft
-        - ./fabric/mods:/minecraft-init/mods
-
     nginx:
       image: jaminima/nginx
       stdin_open: true
@@ -30,6 +8,3 @@ services:
         - "443:443"
       volumes:
         - ./site:/www-root
-      depends_on:
-        - paper
-        - fabric
