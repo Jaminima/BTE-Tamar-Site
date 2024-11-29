@@ -10,7 +10,7 @@ server {
 
 	index index.html index.htm;
 
-	server_name whitegoat.co.uk www.whitegoat.co.uk;
+	server_name bte-tamar.co.uk www.bte-tamar.co.uk;
 
 	location / {
 		try_files $uri $uri/ =404;
@@ -20,6 +20,6 @@ server {
 # HTTP redirect
 server {
     listen 80 default_server;
-    server_name whitegoat.co.uk www.whitegoat.co.uk;
-    return 301 https://whitegoat.co.uk/;
+    server_name bte-tamar.co.uk www.bte-tamar.co.uk;
+    return 301 https://bte-tamar.co.uk/;
 }
