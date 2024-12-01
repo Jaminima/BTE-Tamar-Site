@@ -1,3 +1,1 @@
-https://github.com/Jaminima/Docker-FabricMC
-
-https://github.com/Jaminima/Docker-PaperMC
+https://github.com/Jaminima/Docker-BTE-Tamar
