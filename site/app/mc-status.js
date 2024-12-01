@@ -18,6 +18,5 @@ function setServerStatus(ip, elementId) {
 
 //when the document loads
 $(document).ready(function() {
-    setServerStatus("whitegoat.co.uk:10101", "old-status");
-    setServerStatus("whitegoat.co.uk:10102", "new-status");
+    setServerStatus("bte-tamar.co.uk:25565", "status");
 });
