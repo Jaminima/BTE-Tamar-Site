@@ -23,3 +23,17 @@ server {
     server_name bte-tamar.co.uk www.bte-tamar.co.uk;
     return 301 https://bte-tamar.co.uk/;
 }
+
+server {
+    listen 443 ssl;
+    
+    ssl_certificate /etc/nginx/keys/pub.cer;
+    ssl_certificate_key /etc/nginx/keys/pri.key;
+
+    server_name stats.bte-tamar.co.uk;
+
+    location / {
+        #proxy_pass http://host.docker.internal:8804/;  # For Docker Desktop on Windows/Mac
+        proxy_pass http://172.17.0.1:8804/;  # For Docker on Linux
+    }
+}
