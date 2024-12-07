@@ -24,6 +24,7 @@ server {
     return 301 https://bte-tamar.co.uk/;
 }
 
+#Stats Page
 server {
     listen 443 ssl;
     
@@ -35,5 +36,20 @@ server {
     location / {
         #proxy_pass http://host.docker.internal:8804/;  # For Docker Desktop on Windows/Mac
         proxy_pass http://172.17.0.1:8804/;  # For Docker on Linux
+    }
+}
+
+#Map Page
+server {
+    listen 443 ssl;
+    
+    ssl_certificate /etc/nginx/keys/pub.cer;
+    ssl_certificate_key /etc/nginx/keys/pri.key;
+
+    server_name map.bte-tamar.co.uk;
+
+    location / {
+        #proxy_pass http://host.docker.internal:8100/;  # For Docker Desktop on Windows/Mac
+        proxy_pass http://172.17.0.1:8100/;  # For Docker on Linux
     }
 }
