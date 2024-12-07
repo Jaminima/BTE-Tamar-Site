@@ -45,6 +45,13 @@
       .card p {
         margin: 1rem 0;
       }
+      .btn {
+        width: 100%;
+      }
+      .row{
+        max-width: 40rem;
+        margin: auto;
+      }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="app/mc-status.js"></script>
@@ -66,29 +73,36 @@
         <span>bte-tamar.co.uk:25565</span>
         <span id="status"></span>
         </br>
-        <div class="my-2">
-          <a
-            href="https://www.curseforge.com/download/app"
-            target="_blank"
-            class="btn btn-primary mx-2"
-            >Install CurseForge App</a
-          >
-          <a
-            href="assets/modpacks/BTE-Tamar-2.1.zip"
-            class="btn btn-secondary mx-2"
-            >Download Mod Pack</a
-          >
-          <br/><br/>
-          <a
-            href="https://stats.bte-tamar.co.uk/"
-            class="btn btn-info mx-2"
-            >Player Statistics</a
-          >
-          <a
-            href="https://map.bte-tamar.co.uk/"
-            class="btn btn-info mx-2"
-            >World Map</a
-          >
+        <div class="row">
+          <div class="col-6 mb-2">
+            <a
+              href="https://www.curseforge.com/download/app"
+              target="_blank"
+              class="btn btn-primary"
+              >Install CurseForge App</a
+            >
+          </div>
+          <div class="col-6 mb-2">
+            <a
+              href="assets/modpacks/BTE-Tamar-2.1.zip"
+              class="btn btn-secondary"
+              >Download Mod Pack</a
+            >
+          </div>
+          <div class="col-6 mb-2">
+            <a
+              href="https://stats.bte-tamar.co.uk/"
+              class="btn btn-info"
+              >Player Statistics</a
+            >
+          </div>
+          <div class="col-6 mb-2">
+            <a
+              href="https://map.bte-tamar.co.uk/"
+              class="btn btn-info"
+              >World Map</a
+            >
+          </div>
         </div>
       </div>
     </div>
